@@ -4,8 +4,7 @@
 
 ## General informations
 
-This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit).
-A lot of kudos for theier great work. Please consider to take a look, what a great work they did.
+This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit). A lot of kudos for theier great work.
 
 ## Features
 
@@ -16,52 +15,6 @@ A lot of kudos for theier great work. Please consider to take a look, what a gre
 - Fully responsive
 - Support for social icons
 
-### Built-in shortcodes
-
-#### `image`
-
-Properties:
-
-  - `src` (required)
-  - `alt` (optional)
-  - `position` (optional, default: `left`, options: [`left`, `center`, `right`])
-  - `style`
-
-Example:
-
-``` golang
-{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
-```
-
-#### `figure`
-
-Properties:
-
-  - `src` (required)
-  - `alt` (optional)
-  - `position` (optional, default: `left`, options: [`left`, `center`, `right`])
-  - `style` (optional)
-  - `caption` (optional)
-  - `captionPosition` (optional, default: `center`, options: [`left`, `center`, `right`]),
-  - `captionStyle` (optional)
-
-Example:
-
-``` golang
-{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}
-```
-
-### Code highlighting
-
-Supported languages: [Take a look here](https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+abap+actionscript+ada+apacheconf+apl+applescript+c+arff+asciidoc+asm6502+csharp+autohotkey+autoit+bash+basic+batch+bison+brainfuck+bro+cpp+aspnet+arduino+cil+coffeescript+clojure+ruby+csp+css-extras+d+dart+diff+markup-templating+docker+eiffel+elixir+elm+lua+erb+erlang+fsharp+flow+fortran+gcode+gedcom+gherkin+git+glsl+gml+go+graphql+groovy+less+handlebars+haskell+haxe+hcl+http+hpkp+hsts+ichigojam+icon+inform7+ini+io+j+java+scala+php+javastacktrace+jolie+n4js+markdown+json+julia+keyman+kotlin+latex+crystal+scheme+liquid+lisp+livescript+lolcode+makefile+django+matlab+mel+mizar+monkey+n1ql+typescript+nand2tetris-hdl+nasm+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+perl+php-extras+sql+powershell+processing+prolog+properties+protobuf+scss+puppet+pure+python+q+qore+r+jsx+renpy+reason+vala+rest+rip+roboconf+textile+rust+plsql+sass+stylus+smalltalk+smarty+soy+sas+twig+swift+yaml+tcl+haml+toml+tt2+pug+tsx+visual-basic+vbnet+velocity+verilog+vhdl+vim+wasm+wiki+xeora+xojo+xquery+tap)
-
-By default the theme is using PrismJS to color your code syntax. All you need to do is to wrap you code like this:
-
-<pre>
-``` html
-  // your code here
-```
-</pre>
 
 ## How to start
 
@@ -78,23 +31,11 @@ If you don't want to make any radical changes, it's the best option, because you
 ``` bash
 $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
 ```
-### Favicon
-
-Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these files, put them into your site's static folder:
-
-- android-chrome-192x192.png
-- android-chrome-512x512.png
-- apple-touch-icon.png
-- favicon-16x16.png
-- favicon-32x32.png
-- favicon.ico
-- mstile-150x150.png
-- safari-pinned-tab.svg
-- site.webmanifest
 
 ## How to configure
 
-The theme doesn't require any advanced configuration. Just copy:
+The theme doesn't require any advanced configuration. Just copy the following config file.
+Note: There are more options to configure. Take a look into the `config.toml` in `exampleSite`.
 
 ``` toml
 baseurl = "/"
@@ -111,8 +52,8 @@ theme = "hello-friend-ng"
   disableReadOtherPosts = false
 
   # Metadata mostly used in document's head
-  description = "Homepage and blog by Djordje Atlialp"
-  keywords = "homepage, blog, science, informatics, development, programming"
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
@@ -154,11 +95,61 @@ $ hugo server -t hello-friend-ng
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
 
+## More things
+
+### Built-in shortcodes
+
+Of course you are able to use all default shortcodes from hugo (https://gohugo.io/content-management/shortcodes/).
+
+#### `image`
+
+Properties:
+
+  - `src` (required)
+  - `alt` (optional)
+  - `position` (optional, default: `left`, options: [`left`, `center`, `right`])
+  - `style`
+
+Example:
+
+``` golang
+{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
+```
+
+### Code highlighting
+
+Supported languages: [Take a look here](https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+abap+actionscript+ada+apacheconf+apl+applescript+c+arff+asciidoc+asm6502+csharp+autohotkey+autoit+bash+basic+batch+bison+brainfuck+bro+cpp+aspnet+arduino+cil+coffeescript+clojure+ruby+csp+css-extras+d+dart+diff+markup-templating+docker+eiffel+elixir+elm+lua+erb+erlang+fsharp+flow+fortran+gcode+gedcom+gherkin+git+glsl+gml+go+graphql+groovy+less+handlebars+haskell+haxe+hcl+http+hpkp+hsts+ichigojam+icon+inform7+ini+io+j+java+scala+php+javastacktrace+jolie+n4js+markdown+json+julia+keyman+kotlin+latex+crystal+scheme+liquid+lisp+livescript+lolcode+makefile+django+matlab+mel+mizar+monkey+n1ql+typescript+nand2tetris-hdl+nasm+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+perl+php-extras+sql+powershell+processing+prolog+properties+protobuf+scss+puppet+pure+python+q+qore+r+jsx+renpy+reason+vala+rest+rip+roboconf+textile+rust+plsql+sass+stylus+smalltalk+smarty+soy+sas+twig+swift+yaml+tcl+haml+toml+tt2+pug+tsx+visual-basic+vbnet+velocity+verilog+vhdl+vim+wasm+wiki+xeora+xojo+xquery+tap)
+
+By default the theme is using PrismJS to color your code syntax. All you need to do is to wrap you code like this:
+
+<pre>
+``` html
+  // your code here
+```
+</pre>
+
+### Favicon
+
+Use [RealFaviconGenerator](https://realfavicongenerator.net/) to generate these files, put them into your site's static folder:
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- favicon-16x16.png
+- favicon-32x32.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+- site.webmanifest
+
+
+
 ## Available Social Icons:
 
 - [codechef](https://simpleicons.org/?q=codechef)
 - [codepen](https://simpleicons.org/?q=codepen)
 - [docker](https://simpleicons.org/?q=docker)
+- [dribble](https://simpleicons.org/?q=dribble)
 - [email](https://feathericons.com/?query=mail)
 - [facebook](https://simpleicons.org/?q=facebook)
 - gitbook
@@ -171,6 +162,7 @@ and go to `localhost:1313` in your browser. From now on all the changes you make
 - [linkedin](https://feathericons.com/?query=linked)
 - [podcasts-apple](https://simpleicons.org/?q=podcast)
 - [podcasts-google](https://simpleicons.org/?q=podcast)
+- [reddit](https://simpleicons.org/?q=reddit)
 - [slack](https://simpleicons.org/?q=slack)
 - stackoverflow
 - telegram
@@ -207,10 +199,6 @@ and then run:
 $ npm install
 ```
 
-## How to contribute
-
-If you spot any bugs, please use [Issue Tracker](https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/rhazdon/hugo-theme-hello-friend-ng/pulls).
-
 ## Third Party
 
   - [normalize.css](https://github.com/necolas/normalize.css)
@@ -220,6 +208,6 @@ If you spot any bugs, please use [Issue Tracker](https://github.com/rhazdon/hugo
 
 ## Licence
 
-Copyright © 2019 Djordje Atlialp
+Copyright © 2019-2020 Djordje Atlialp
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
